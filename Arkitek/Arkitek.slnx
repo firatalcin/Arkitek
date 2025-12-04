@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Arkitek.DataAccess/Arkitek.DataAccess.csproj" Id="fd217d3f-7af0-4be6-a071-d00bc226b28c" />
   <Project Path="Arkitek.Entity/Arkitek.Entity.csproj" />
 </Solution>
