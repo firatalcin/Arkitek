@@ -1,9 +1,6 @@
 ﻿using Arkitek.Entity.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arkitek.DataAccess.Interceptors
 {
@@ -13,12 +10,12 @@ namespace Arkitek.DataAccess.Interceptors
         {
             foreach (var entry in eventData.Context.ChangeTracker.Entries())
             {
-                if(entry.Entity is not BaseEntity baseEntity)
+                if (entry.Entity is not BaseEntity baseEntity)
                 {
-                    continue; 
+                    continue;
                 }
 
-                if(entry.State is EntityState.Added)
+                if (entry.State is EntityState.Added)
                 {
                     eventData.Context.Entry(baseEntity).Property(x => x.CreatedAt).CurrentValue = DateTime.UtcNow;
                     eventData.Context.Entry(baseEntity).Property(x => x.UpdatedAt).IsModified = false;
