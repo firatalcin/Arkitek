@@ -1,10 +1,33 @@
 ﻿using Arkitek.Entity.Entities;
+using Arkitek.Entity.Entities.Common;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Arkitek.DataAccess
 {
     public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                if (typeof(BaseEntity).IsAssignableFrom(entityType.ClrType))
+                {
+                    modelBuilder.Entity(entityType.ClrType).HasQueryFilter(ConvertToDeleteFilter(entityType.ClrType));
+                }
+            }
+        }
+
+        private static LambdaExpression ConvertToDeleteFilter(Type type)
+        {
+            var parameter = Expression.Parameter(type, "e");
+            var property = Expression.Property(Expression.Convert(parameter, typeof(BaseEntity)), "IsDeleted");
+            var notDeleted = Expression.Not(property);
+            return Expression.Lambda(notDeleted, parameter);
+        }
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
