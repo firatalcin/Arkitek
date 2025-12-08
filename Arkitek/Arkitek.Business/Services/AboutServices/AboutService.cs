@@ -5,11 +5,6 @@ using Arkitek.DataAccess.UOW;
 using Arkitek.Entity.Entities;
 using FluentValidation;
 using Mapster;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace Arkitek.Business.Services.AboutServices
 {
@@ -29,7 +24,7 @@ namespace Arkitek.Business.Services.AboutServices
         public async Task<BaseResult<object>> DeleteAsync(int id)
         {
             var about = await aboutRepository.GetByIdAsync(id);
-            if(about is null)
+            if (about is null)
             {
                 return BaseResult<object>.Fail("About Not Found");
             }

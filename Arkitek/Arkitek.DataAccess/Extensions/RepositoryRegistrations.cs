@@ -9,7 +9,7 @@ namespace Arkitek.DataAccess.Extensions
 {
     public static class RepositoryRegistrations
     {
-        public static void AddRepositoryExtensions(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddRepositoryExtensions(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AppDbContext>(opt =>
             {
@@ -19,6 +19,8 @@ namespace Arkitek.DataAccess.Extensions
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            return services;
         }
     }
 }
