@@ -8,7 +8,6 @@ namespace Arkitek.Business.Extensions
         public static IServiceCollection AddServicesExtensions(this IServiceCollection services)
         {
             services.AddScoped<IAboutService, AboutService>();
-
             return services;
         }
     }
