@@ -1,4 +1,5 @@
 ﻿using Arkitek.Entity.Entities.Common;
+using Arkitek.Entity.Enums;
 
 namespace Arkitek.Entity.Entities
 {

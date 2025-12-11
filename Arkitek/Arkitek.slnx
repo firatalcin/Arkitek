@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Arkitek.API/Arkitek.API.csproj" Id="1a666a3e-042e-4a5a-8d92-950c7be9e9f6" />
   <Project Path="Arkitek.Business/Arkitek.Business.csproj" Id="b8d65a2d-27bb-42ba-9ecd-d2338b5b2c13" />
   <Project Path="Arkitek.DataAccess/Arkitek.DataAccess.csproj" Id="fd217d3f-7af0-4be6-a071-d00bc226b28c" />
   <Project Path="Arkitek.Entity/Arkitek.Entity.csproj" />

@@ -10,8 +10,7 @@ namespace Arkitek.Business.Services.AboutServices
 {
     public class AboutService(
         IGenericRepository<About> aboutRepository,
-        IUnitOfWork unitOfWork,
-        IValidator<About> validator) : IAboutService
+        IUnitOfWork unitOfWork) : IAboutService
     {
         public async Task<BaseResult<object>> CreateAsync(CreateAboutDto aboutDto)
         {
