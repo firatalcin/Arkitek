@@ -1,4 +1,6 @@
-﻿namespace Arkitek.Business.Base
+﻿using System.Text.Json.Serialization;
+
+namespace Arkitek.Business.Base
 {
     public class BaseResult<T>
     {
@@ -6,10 +8,10 @@
 
         public IEnumerable<object> Errors { get; set; }
 
-
+        [JsonIgnore]
         public bool IsSuccessful => Errors == null || !Errors.Any();
 
-
+        [JsonIgnore]
         public bool IsFailure => !IsSuccessful;
 
 
