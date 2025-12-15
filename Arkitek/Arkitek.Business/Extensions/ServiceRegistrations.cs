@@ -10,8 +10,11 @@ namespace Arkitek.Business.Extensions
     {
         public static IServiceCollection AddServicesExtensions(this IServiceCollection services)
         {
-            services.AddScoped<IAboutService, AboutService>();
-            services.AddScoped<IAppointmentService, AppointmentService>();
+            services.Scan(opt => opt
+           .FromAssemblyOf<BusinessAssembly>()
+           .AddClasses(x => x.Where(t => t.Name.EndsWith("Service")))
+           .AsImplementedInterfaces()
+           .WithScopedLifetime());
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
