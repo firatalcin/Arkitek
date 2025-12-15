@@ -1,5 +1,8 @@
 ﻿using Arkitek.Business.Services.AboutServices;
+using Arkitek.Business.Services.AppointmentServices;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Arkitek.Business.Extensions
 {
@@ -8,6 +11,10 @@ namespace Arkitek.Business.Extensions
         public static IServiceCollection AddServicesExtensions(this IServiceCollection services)
         {
             services.AddScoped<IAboutService, AboutService>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
+
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
             return services;
         }
     }
