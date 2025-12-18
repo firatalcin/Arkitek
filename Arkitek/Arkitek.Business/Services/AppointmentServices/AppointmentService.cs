@@ -50,7 +50,7 @@ namespace Arkitek.Business.Services.AppointmentServices
             var result = await _unitOfWork.SaveChangesAsync();
             return result ? BaseResult<object>.Success() : BaseResult<object>.Fail("Delete Failed");
         }
-        
+
 
         public async Task<BaseResult<List<ResultAppointmentDto>>> GetAllAsync()
         {

@@ -3,7 +3,6 @@ using Arkitek.Business.DTOs.AboutDtos;
 using Arkitek.DataAccess.Repositories;
 using Arkitek.DataAccess.UOW;
 using Arkitek.Entity.Entities;
-using FluentValidation;
 using Mapster;
 
 namespace Arkitek.Business.Services.AboutServices

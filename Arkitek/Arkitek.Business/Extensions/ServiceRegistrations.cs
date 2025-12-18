@@ -1,6 +1,4 @@
-﻿using Arkitek.Business.Services.AboutServices;
-using Arkitek.Business.Services.AppointmentServices;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
