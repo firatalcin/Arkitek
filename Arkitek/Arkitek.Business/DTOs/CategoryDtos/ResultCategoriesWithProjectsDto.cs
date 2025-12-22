@@ -1,7 +1,4 @@
 ﻿using Arkitek.Business.DTOs.ProjectDtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arkitek.Business.DTOs.CategoryDtos
 {

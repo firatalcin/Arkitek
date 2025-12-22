@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Arkitek.Business.DTOs.ProjectDtos
+﻿namespace Arkitek.Business.DTOs.ProjectDtos
 {
     public record CreateProjectDto(
     string? ImageUrl,
