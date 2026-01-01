@@ -1,7 +1,6 @@
 ﻿using Arkitek.Business.DTOs.CategoryDtos;
 using Arkitek.Business.Services.CategoryServices;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Arkitek.API.Controllers

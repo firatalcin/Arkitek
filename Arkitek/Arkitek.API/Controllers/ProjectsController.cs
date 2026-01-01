@@ -1,7 +1,6 @@
 ﻿using Arkitek.Business.DTOs.ProjectDtos;
 using Arkitek.Business.Services.ProjectServices;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Arkitek.API.Controllers

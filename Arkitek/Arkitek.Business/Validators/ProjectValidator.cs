@@ -1,8 +1,5 @@
 ﻿using Arkitek.Entity.Entities;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arkitek.Business.Validators
 {

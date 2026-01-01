@@ -1,8 +1,5 @@
 ﻿using Arkitek.Business.Base;
 using Arkitek.Business.DTOs.ProjectDtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arkitek.Business.Services.ProjectServices
 {
